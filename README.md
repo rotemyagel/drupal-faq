@@ -8,5 +8,8 @@
 - i create sub-theme by the name  bootstrap_faq base theme classy in themes->custom
 - folder sites->default->settings.php change the $databases array in bottom of file
 - for the project localhost i use http://localhost/faq/
+- /user/login
+username: admin
+password: admin123
 
 
