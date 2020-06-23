@@ -1,0 +1,81 @@
+.site-logo {
+    display: block;
+   
+}
+
+.site-logo img {
+    display: block;
+    max-width: 100%;
+    height: 50px;
+}
+
+
+
+.faq .nav-tabs {
+    border-bottom: none;
+    border-radius: 0;
+}
+
+.faq .nav-link {
+    color: inherit;
+}
+
+
+
+.faq .btn-link {
+    color: inherit;
+}
+
+.faq .btn-link:focus {
+    border-radius: 0;
+}
+
+.faq .card{
+    border-radius: 0;
+}
+
+.faq .nav-tabs .nav-link {
+    color: inherit;
+    background-color: #fff;
+    border-color: #dee2e6 #dee2e6 #fff;
+}
+
+.faq .card-header{
+    position: relative;
+}
+
+.faq .card-open .card-header:after, .faq .card-close .card-header:after{
+    content: '';
+    display: inline-block;
+    font: normal normal normal 12px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.faq .card-open .card-header:after{
+ content: "\f068";
+}
+.faq .card-close .card-header:after{
+    content: "\f067";
+}
+
+.faq .nav-tabs .nav-link:hover:not(.active) {
+    background-color: rgba(0,0,0,.03);
+}
+
+    
+
+.faq .row-tabs {
+    margin-right: -.25rem;
+    margin-left: -.25rem;
+}
+
+.faq .nav-tabs .nav-link.active {
+    background-color: rgba(0,0,0,.03);
+}

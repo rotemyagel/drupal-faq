@@ -1,0 +1,36 @@
+<?php
+
+
+function bootstrap_faq_preprocess_page(&$variables) {
+
+    $vid = 'voc_faq';
+    $terms =\Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree($vid);
+    foreach ($terms as $term) {
+        $term_obj = Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($term->tid);
+        
+        $term_data[] = array(
+            'id' => $term->tid,
+            'name' => $term->name,
+            'machine'=> strtolower(str_replace(' ', '-', $term->name)),
+            'icon' => $term_obj->get('field_faq_icon')->value
+        );
+    }
+    
+    $variables['terms'] = $term_data;
+
+    
+
+
+    $query = \Drupal::entityTypeManager()->getStorage('node')->getQuery();
+    // Get all Faq node IDs.
+    $nids = $query
+    ->condition('status', 1)
+    ->condition('type', 'faq_type')
+    ->execute();
+    // Load all Faq nodes.
+    $nodes = \Drupal\node\Entity\Node::loadMultiple($nids);
+    // Pass them to page.html.twig.
+    $variables['faqs'] = $nodes; 
+
+    
+}

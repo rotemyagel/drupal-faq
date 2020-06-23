@@ -1,0 +1,8 @@
+name: Bootstrap Faq Theme
+description: 'Bootstrap Faq Theme for My Website.'
+type: theme
+core: 8.x
+base theme: classy
+
+libraries:
+  - bootstrap_faq/bootstrap
