@@ -4,7 +4,7 @@
 ### Installing
 
 - git clone https://github.com/rotemyagel/drupal-faq.git
-- drupal_faq.sql in the folder call db
+- drupal_faq.sql in the folder called db
 - create sub-theme by the name  bootstrap_faq
 - folder sites->default->settings.php change the $databases array in bottom of file
 - for the project local i use http://localhost/faq/
